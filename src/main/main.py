@@ -11,6 +11,12 @@ def main(page: ft.Page):
         text_anzeige.value = "Elendig"
         page.update() #Aktualisiert Ansicht
 
+    async def on_keyboard(e: ft.KeyboardEvent):
+        if e.key == "Escape":
+            await page.window.close()
+
+    page.on_keyboard_event = on_keyboard
+
     # 3. UI Elemente
     ueberschrift = ft.Container(
         content = ft.Text(value="Streckenübersicht", size = 32, weight=ft.FontWeight.BOLD),
