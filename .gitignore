@@ -1,0 +1,11 @@
+# Virtuelle Umgebung (Ihr lokaler .venv Ordner)
+.venv/
+
+# Python Cache-Dateien
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Poetry temporäre Cache-Dateien (optional, falls sie entstehen)
+.poetry/
