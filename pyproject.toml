@@ -1,0 +1,19 @@
+[project]
+name = "streckenübersicht"
+version = "0.1.0"
+description = "Ein Programm um einen Überblick über z.B. seine Fahrradstrecken zu bekommen"
+authors = [
+    {name = "Benjamin-306",email = "github@benjamin.fudeus.net"}
+]
+requires-python = ">=3.14"
+dependencies = [
+    "flet (>=0.86.5,<0.87.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+package-mode = false
