@@ -3,6 +3,7 @@ import flet as ft
 def main(page: ft.Page):
     # 1. Fenstertitel + Größe
     page.title = "Streckenübersicht"
+    page.window.maximized = True
     page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
     page.vertical_alignment = ft.MainAxisAlignment.START
 
@@ -32,15 +33,18 @@ def main(page: ft.Page):
                 ft.Button(content=ft.Text("Fahrrad"),
                           width = 300,
                           height = 90,
-                          style = ft.ButtonStyle(text_style=ft.TextStyle(size = 26, weight = ft.FontWeight.W_600))),
+                          style = ft.ButtonStyle(text_style=ft.TextStyle(size = 26,
+                                                                         weight = ft.FontWeight.W_600))),
                 ft.Button(content = ft.Text("Zu Fuß"),
                           width = 300,
                           height = 90,
-                          style = ft.ButtonStyle(text_style=ft.TextStyle(size = 26, weight = ft.FontWeight.W_600))),
+                          style = ft.ButtonStyle(text_style=ft.TextStyle(size = 26,
+                                                                         weight = ft.FontWeight.W_600))),
                 ft.Button(content=ft.Text("Skates"), 
                         width = 300,
                         height = 90,
-                        style = ft.ButtonStyle(text_style=ft.TextStyle(size = 26, weight = ft.FontWeight.W_600)))
+                        style = ft.ButtonStyle(text_style=ft.TextStyle(size = 26,
+                                                                       weight = ft.FontWeight.W_600)))
             ]
         )
     )
