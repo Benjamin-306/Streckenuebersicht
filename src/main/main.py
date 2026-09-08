@@ -21,7 +21,8 @@ def main(page: ft.Page):
         content = ft.Text(value="Streckenübersicht", size = 32,
                           weight=ft.FontWeight.BOLD),
         alignment=ft.Alignment(0, -1),
-        height = 150)
+        height = 150
+    )
     info_text = ft.Container(
         content = ft.Text(value = "Bitte wähle dein Fortbewegungsmittel:",
                           size = 24, weight=ft.FontWeight.W_500),
