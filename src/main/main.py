@@ -29,31 +29,28 @@ def main(page: ft.Page):
         alignment = ft.Alignment(0, -1),
         height = 50
     )
+    button_style = ft.ButtonStyle(
+        text_style = ft.TextStyle(size = 26, weight = ft.FontWeight.W_600),
+        elevation= 2
+    )
+    fortbewegungsmittel = ["Fahrrad", "Zu Fuß", "Skates"]
+    button_controls = [
+        ft.Button(
+            content = ft.Text(text),
+            width = 300,
+            height = 90,
+            style = button_style
+        ) for text in fortbewegungsmittel
+    ]
     choices = ft.Container(
         padding = 10,
         content= ft.Row(
             alignment=ft.MainAxisAlignment.CENTER,
-            controls=[
-                ft.Button(content=ft.Text("Fahrrad"),
-                          width = 300,
-                          height = 90,
-                          style = ft.ButtonStyle(text_style=ft.TextStyle(size = 26,
-                                                                         weight = ft.FontWeight.W_600))),
-                ft.Button(content = ft.Text("Zu Fuß"),
-                          width = 300,
-                          height = 90,
-                          style = ft.ButtonStyle(text_style=ft.TextStyle(size = 26,
-                                                                         weight = ft.FontWeight.W_600))),
-                ft.Button(content=ft.Text("Skates"), 
-                        width = 300,
-                        height = 90,
-                        style = ft.ButtonStyle(text_style=ft.TextStyle(size = 26,
-                                                                       weight = ft.FontWeight.W_600)))
-            ]
+            controls = button_controls
         )
     )
 
-    # 4. Elemente hinzfügen
+    # 4. Elemente hinzufügen
     page.add(ueberschrift, info_text, choices)
 
 ft.run(main)
