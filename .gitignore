@@ -9,3 +9,6 @@
 
 # Poetry temporäre Cache-Dateien (optional, falls sie entstehen)
 .poetry/
+
+#json Speicherdateien
+*.json
