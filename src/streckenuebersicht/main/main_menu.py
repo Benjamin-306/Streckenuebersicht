@@ -58,9 +58,41 @@ class MainMenuView(ft.View):
         alignment=ft.Alignment(0, 0)
         )
 
+        async def quit():
+            await page.window.close()
+
+        quit_button_style = ft.ButtonStyle(
+            color={
+                ft.ControlState.HOVERED: ft.Colors.BLUE_400,
+                ft.ControlState.DEFAULT: ft.Colors.BLUE_200,
+            },
+            side=ft.BorderSide(width=0, color=ft.Colors.TRANSPARENT),
+            
+            elevation=0,
+            overlay_color=ft.Colors.TRANSPARENT,
+            padding=0,
+            animation_duration=200,
+            text_style=ft.TextStyle(
+                size=13,
+                weight=ft.FontWeight.W_600
+            )
+        )
+
+        quit_button = ft.Container(
+                content=ft.Button(
+                        content=ft.Text("Beenden"),
+                        width=150,
+                        height=45,
+                        style=quit_button_style,
+                        on_click=quit
+                ),
+                alignment=ft.Alignment(0,0)
+        )
+
         self.controls = [
             ueberschrift,
             info_text,
             choices,
-            credits
+            credits,
+            quit_button
         ]
